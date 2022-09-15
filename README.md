@@ -1,5 +1,5 @@
-# Sitecore Experience Commerce to Azure Storage Migration
-This is sample plugin to migrate Sitecore Commerce catalog images into Azure Storage.
+# Sitecore Experience Commerce Sellable Item Image Export Plugin
+This is sample plugin to export Sitecore Commerce catalog images and either downloaded into the local file system or uploaded into Azure Storage.
 
 ## Supported Sitecore Experience Commerce Versions
 - XC 10.1
