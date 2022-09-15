@@ -47,7 +47,7 @@ The image settings manages behaviour of the product feed generator.
 * **`UploadImages`:** If enabled, the images will be uploaded to Azure Storage, otherwise images will be downloaded to the local file system.
 * **`LocalImageLocation`:** The folder path of the local file system where images will be downloaded.
 * **`ImageConfigurations`:** An array of image configurations to transform images when uploading to Azure Storage.
-  * **`TargetSize`:** The size of image, resized prior to uploading to Azure Storage.
+  * **`TargetSize`:** The size of image, resized prior to uploading to Azure Storage. If left null, the image will not be resized.
   * **`FileNameSuffix`:** The suffix appended to the image file name to ensure unique files are uploaded.
 
 ### Azure Storage Settings
