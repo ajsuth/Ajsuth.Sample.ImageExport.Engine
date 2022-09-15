@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "2f7fda61-000e-4708-bca6-bc9471655177",
+		"name": "Export Images",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3714788"
+	},
+	"item": [
+		{
+			"name": "Export Images",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "ShopName",
+						"value": "{{ShopName}}"
+					},
+					{
+						"key": "ShopperId",
+						"value": "{{ShopperId}}"
+					},
+					{
+						"key": "Language",
+						"value": "{{Language}}"
+					},
+					{
+						"key": "Currency",
+						"value": "{{Currency}}"
+					},
+					{
+						"key": "Environment",
+						"value": "{{Environment}}"
+					},
+					{
+						"key": "GeoLocation",
+						"value": "{{GeoLocation}}"
+					},
+					{
+						"key": "CustomerId",
+						"value": "{{CustomerId}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{SitecoreIdToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"imageSettings\": {\n        \"@odata.type\": \"Ajsuth.Sample.AzureStorage.Engine.Policies.ImageExportPolicy\",\n        \"ExportStandaloneProducts\": true,\n        \"ExportProductsWithVariants\": true,\n        \"UploadImages\": true,\n        \"OverrideExistingImages\": false,\n        \"LocalImageLocation\" : \"C:\\\\Images\\\\Habitat\",\n        \"ImageConfigurations\" : [\n            {\n                \"TargetSize\": 300,\n                \"FileNameSuffix\": \"\"\n            },\n            {\n                \"TargetSize\": 100,\n                \"FileNameSuffix\": \"-s\"\n            }\n        ]\n    },\n    \"azureStorageSettings\": {\n        \"@odata.type\": \"Ajsuth.Sample.AzureStorage.Engine.Policies.AzureStoragePolicy\",\n        \"ConnectionString\": \"\",\n        \"BaseUrl\": \"\",\n        \"Container\": \"\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{ServiceHost}}/{{OpsApi}}/ExportImages()",
+					"host": [
+						"{{ServiceHost}}"
+					],
+					"path": [
+						"{{OpsApi}}",
+						"ExportImages()"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
